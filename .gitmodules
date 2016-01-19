@@ -1,0 +1,6 @@
+[submodule "openssl-0.9.8"]
+	path = openssl-0.9.8
+	url = git@github.com:openssl/openssl.git
+[submodule "openssl-1.0.0"]
+	path = openssl-1.0.0
+	url = git@github.com:openssl/openssl.git
