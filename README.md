@@ -8,6 +8,11 @@ This repository is just in an easier-to-use form, making it faster to set
 up a universal build system with the exact versions of SSL that we need.
 
 
+#### Cloning this repository
+
+Since this repository has subprojects, it should be cloned with a command like:
+<br>```git clone --recursive git@github.com:MSFTOSSMgmt/ostc-openssl.git```
+
 #### Building OpenSSL for universal agents
 
 To build OpenSSL for universal agents, we require building:
