@@ -81,3 +81,12 @@ Finally, note that these bits are both installed <b>regardless</b> of the
 version of SSL installed on the system. Furthermore, nothing (other than
 our kit) links against these. No system software uses the SSL versions
 in these locations.
+
+### Code of Conduct
+
+This project has adopted the [Microsoft Open Source Code of Conduct]
+(https://opensource.microsoft.com/codeofconduct/).  For more
+information see the [Code of Conduct FAQ]
+(https://opensource.microsoft.com/codeofconduct/faq/) or contact
+[opencode@microsoft.com](mailto:opencode@microsoft.com) with any
+additional questions or comments.
