@@ -8,3 +8,8 @@
 	url = git@github.com:openssl/openssl.git
 	branch = OpenSSL_1_0_0
 	ignore = dirty
+[submodule "openssl-1.1.0"]
+	path = openssl-1.1.0
+	url = git@github.com:openssl/openssl.git
+	branch = OpenSSL_1_1_0
+	ignore = dirty

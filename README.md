@@ -17,8 +17,9 @@ Since this repository has subprojects, it should be cloned with a command like:
 
 To build OpenSSL for universal agents, we require building:
 
-- OpenSSL 0.9.8
-- OpenSSL 1.0.0
+- [OpenSSL 0.9.8](https://github.com/Microsoft/ostc-openssl#building-ssl-098)
+- [OpenSSL 1.0.0](https://github.com/Microsoft/ostc-openssl#building-ssl-100)
+- [OpenSSL 1.1.0](https://github.com/Microsoft/ostc-openssl#building-ssl-110)
 
 ##### Building SSL 0.9.8
 
@@ -64,6 +65,21 @@ Notes for SSL configuration:
 - Note: https://stackoverflow.com/questions/8206546/undefined-symbol-sslv2-method discusses why the -no-ssl2 qualifier is now required for compatibility with newer Ubuntu systems, depending on APIs utilized by the SSL client.
 
 - https://stackoverflow.com/questions/22311699/trouble-with-openssl-on-rhel-6-3-and-all-ruby-installers describes why we need to specify the -no-ec2m flag.
+
+##### Building SSL 1.1.0
+
+Untar your distribution file, if necessary, and go into the base
+directory of OpenSSL 1.0.0 with a command like:<br>```cd openssl-1.1.0```
+
+To configure and build SSL 1.1.0, use the following commands:
+
+```
+./config --prefix=/usr/local_ssl_1.1.0 shared -no-ssl2 -no-ec -no-ec2m -no-ecdh
+make depend
+make
+make test
+sudo make install_sw
+```
 
 ### Closing notes
 
