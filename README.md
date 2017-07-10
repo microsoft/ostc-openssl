@@ -68,8 +68,28 @@ Notes for SSL configuration:
 
 ##### Building SSL 1.1.0
 
-Untar your distribution file, if necessary, and go into the base
-directory of OpenSSL 1.0.0 with a command like:<br>```cd openssl-1.1.0```
+NOTE: Build of SSL 1.1.0 needs a more recent version of Perl than most
+of our universal build systems have.
+
+Note that we've had problems buliding with "very" bleeding edge versions
+(like v5.26.0), so we've stepped back to prior versions.
+
+This PERL from source can be achieved by using the following commands:
+
+```
+git clone https://github.com/Perl/perl5.git 
+pushd perl5/
+./Configure -des -Dprefix=/usr/local_perl_5_24_1
+make test
+sudo make install
+```
+
+Once you have built PERL (if needed), untar your distribution file,
+if necessary, and go into the base directory of OpenSSL 1.1.0 with a
+command like:<br>```cd openssl-1.1.0```
+
+If you needed to build PERL from source, be sure to place that version
+of PERL first in your PATH environment variable.
 
 To configure and build SSL 1.1.0, use the following commands:
 
