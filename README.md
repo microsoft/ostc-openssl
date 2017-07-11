@@ -79,6 +79,7 @@ This PERL from source can be achieved by using the following commands:
 ```
 git clone https://github.com/Perl/perl5.git 
 pushd perl5/
+git checkout v5.24.1
 ./Configure -des -Dprefix=/usr/local_perl_5_24_1
 make test
 sudo make install
