@@ -89,8 +89,12 @@ Once you have built PERL (if needed), untar your distribution file,
 if necessary, and go into the base directory of OpenSSL 1.1.0 with a
 command like:<br>```cd openssl-1.1.0```
 
-If you needed to build PERL from source, be sure to place that version
-of PERL first in your PATH environment variable.
+If you needed to build PERL from source, be sure to place the new version
+of PERL first in your PATH environment variable, like this:
+
+```
+export PATH=/usr/local_perl_5_24_1/bin:$PATH
+```
 
 To configure and build SSL 1.1.0, use the following commands:
 
