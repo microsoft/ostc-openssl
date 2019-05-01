@@ -19,6 +19,7 @@ To build OpenSSL for universal agents, we require building:
 
 - [OpenSSL 0.9.8](https://github.com/Microsoft/ostc-openssl#building-ssl-098)
 - [OpenSSL 1.0.0](https://github.com/Microsoft/ostc-openssl#building-ssl-100)
+- [OpenSSL 1.0.2](https://github.com/Microsoft/ostc-openssl#building-ssl-102)
 - [OpenSSL 1.1.0](https://github.com/Microsoft/ostc-openssl#building-ssl-110)
 
 ##### Building SSL 0.9.8
@@ -59,6 +60,29 @@ sudo make install_sw
 ```
 
 Unlike SSL 0.9.8, we've never seen unit test failures for SSL 1.0.0.
+
+Notes for SSL configuration:
+
+- Note: https://stackoverflow.com/questions/8206546/undefined-symbol-sslv2-method discusses why the -no-ssl2 qualifier is now required for compatibility with newer Ubuntu systems, depending on APIs utilized by the SSL client.
+
+- https://stackoverflow.com/questions/22311699/trouble-with-openssl-on-rhel-6-3-and-all-ruby-installers describes why we need to specify the -no-ec2m flag.
+
+##### Building SSL 1.0.2
+
+Untar your distribution file, if necessary, and go into the base
+directory of OpenSSL 1.0.2 with a command like:<br>```cd openssl-1.0.2```
+
+To configure and build SSL 1.0.2, use the following commands:
+
+```
+./config --prefix=/usr/local_ssl_1.0.2 shared -no-ssl2 -no-ec -no-ec2m -no-ecdh
+make depend
+make
+make test
+sudo make install_sw
+```
+
+Unlike SSL 0.9.8, we've never seen unit test failures for SSL 1.0.2.
 
 Notes for SSL configuration:
 
